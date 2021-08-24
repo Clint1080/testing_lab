@@ -1,7 +1,7 @@
 
 
 module.exports = {
-    returnTwo: (returnTwo) => {
+    returnTwo: () => {
         return 2
     },
     
@@ -10,6 +10,18 @@ module.exports = {
     },
 
     add: (num1, num2) => {
-        return (sum(num1 + num2))
+        return num1 + num2
+    },
+
+    multiply: (num1, num2) => {
+        return num1 * num2
+    },
+
+    divide: (num1, num2) => {
+        return num1/num2
+    },
+
+    subtract: (num1, num2) => {
+        return num1 - num2
     }
 }
