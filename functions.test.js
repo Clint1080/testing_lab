@@ -1,5 +1,5 @@
 const favoriteMovies = ["Matrix", "Tron", "Kung Fu Hustle", "Count Of Monte Cristo"]
-const {returnTwo, greeting, add, multiply, divide, subtract} = require('./functions')
+const {returnTwo, greeting, add, multiply, divide, subtract, menuOpened, modalActive} = require('./functions')
 
 test('Should return 2', () => {
     expect(returnTwo()).toEqual(2)
@@ -34,3 +34,21 @@ describe("Math functions", () => {
     })
 
 })
+
+describe("DOM events", () => {
+  test("this should show the falsy for when the menu is opened", () => {
+    expect(menuOpened).toBeFalsy();
+  });
+
+  test("this should expect the modal active to not be falsy because the modal is active", () => {
+    expect(modalActive).not.toBeFalsy();
+    expect(modalActive).toBeTruthy();
+  });
+});
+
+
+
+test("the movies list has matrix in it", () => {
+  expect(favoriteMovies).toContain("Matrix");
+  expect(new Set(favoriteMovies)).toContain("Matrix");
+});
